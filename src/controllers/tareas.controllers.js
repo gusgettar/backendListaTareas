@@ -48,7 +48,7 @@ export const borrarTarea = async (req, res) => {
     }
     await Tarea.findByIdAndDelete(req.params.id)
     res.status(200).json({
-      mensaje: "Tarea borrada correctamente",
+      mensaje: `La tarea "${tareaBuscada.nombreTarea}" fue eliminada`,
     });
   } catch (error) {
     res.status(500).json({
