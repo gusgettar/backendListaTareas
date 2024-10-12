@@ -67,7 +67,7 @@ export const actualizarTarea = async(req,res) => {
         }
         await Tarea.findByIdAndUpdate(req.params.id, req.body)
         res.status(200).json({
-            mensaje: "El producto fue actualizado con exito"
+            mensaje: "La tarea fue actualizada con exito"
         })
     } catch (error) {
         res.status(500).json({mensaje: "Ocurrio un error al intentar actualizar la tarea"})
